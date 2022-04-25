@@ -15,10 +15,44 @@ const inventors = [
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
-const fifteen = inventors.filter(
+let fifteen = inventor.filter(function (inventor) {
+  if (inventor.year >= 1500 && inventor.year < 1600) {
+    return true; // keep it
+  }
+});
+console.log(fifteen);
+// {first: "Galileo", last: "Galilei", year: 1564, passed: 1642}
+// {first: "Johannes", last: "Kepler", year: 1571, passed: 1630}
+
+// Same but ternary
+fifteen = inventors.filter(
   (inventor) => inventor.year >= 1500 && inventor.year < 1600
 );
 
 console.log(fifteen);
 // {first: "Galileo", last: "Galilei", year: 1564, passed: 1642}
 // {first: "Johannes", last: "Kepler", year: 1571, passed: 1630}
+
+//
+
+// 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+// !!! Type in devtools console on link
+const category = document.querySelector(".mw-category");
+const links = Array.from(category.querySelectorAll("a"));
+const de = links
+  .map((link) => link.textContent)
+  .filter((streetName) => streetName.includes(`de`));
+//
+// 0: "Boulevard de l'Amiral-Bruix"
+// 1: "Boulevard des Capucines"
+// 2: "Boulevard de la Chapelle"
+// 3: "Boulevard de Clichy"
+// 4: "Boulevard de l'Hôpital"
+// 5: "Boulevard des Italiens"
+// 6: "Boulevard de la Madeleine"
+// 7: "Boulevard de Magenta"
+// 8: "Boulevard Marguerite-de-Rochechouart"
+// 9: "Boulevard de Sébastopol"
+// 10: "Boulevard de Strasbourg"
+// 11: "Boulevard de la Zone"
