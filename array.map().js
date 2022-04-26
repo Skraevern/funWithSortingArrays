@@ -22,3 +22,20 @@ console.log(fullNames);
 fullNames = inventors.map((inventor) => `${inventor.first} ${inventor.last}`);
 console.log(fullNames);
 //['Albert Einstein', 'Isaac Newton', 'Galileo Galilei', 'Marie Curie', 'Johannes Kepler', 'Nicolaus Copernicus', 'Max Planck', 'Katherine Blodgett', 'Ada Lovelace', 'Sarah E. Goode', 'Lise Meitner', 'Hanna Hammarström']
+
+//
+
+const books = [
+  {
+    title: "Book",
+    author: "Name",
+  },
+  {
+    title: "Book2",
+    author: "Name2",
+  },
+];
+const getTheTitles = function (array) {
+  return array.map((book) => book.title);
+};
+console.log(getTheTitles(books)); // ["Book", "Book2"]

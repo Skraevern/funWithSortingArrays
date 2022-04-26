@@ -338,3 +338,12 @@ console.log(newComments);
 // 1: {text: 'You are the best', id: 2039842}
 // 2: {text: 'Ramen is my fav food ever', id: 123523}
 // 3: {text: 'Nice Nice Nice!', id: 542328}
+
+// Sum all in array
+
+let sumArray = [1, 2];
+console.log(sumArray.reduce((a, b) => a + b, 0)); // 3
+sumArray = [1, 2, 3, 4, 5];
+console.log(sumArray.reduce((a, b) => a + b, 0)); // 15
+
+//

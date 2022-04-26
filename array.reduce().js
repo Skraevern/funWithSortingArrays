@@ -65,3 +65,23 @@ const transportation = data.reduce(function (obj, item) {
 
 console.log(transportation);
 // {car: 5, truck: 3, bike: 2, walk: 2, van: 2}
+
+//
+
+// Sum all in array
+let sumArray = [1, 2];
+console.log(sumArray.reduce((a, b) => a + b, 0)); // 3
+sumArray = [1, 2, 3, 4, 5];
+console.log(sumArray.reduce((a, b) => a + b, 0)); // 15
+
+//
+
+// Add all in array
+let multiplyArray = [2, 4];
+console.log(multiplyArray.reduce((a, b) => a * b, 1)); // 8
+
+multiplyArray = [2, 4, 6, 8, 10, 12, 14];
+console.log(multiplyArray.reduce((a, b) => a * b, 1)); // 645120
+
+let powerArray = [4, 3];
+console.log(powerArray.reduce((a, b) => a * b, 1));
